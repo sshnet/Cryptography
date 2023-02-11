@@ -37,11 +37,22 @@
     <DocumentationFile>bin\Release\SshNet.Security.Cryptography.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\SshNet.Security.Cryptography.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SshNet.Security.Cryptography.snk">
+      <Link>SshNet.Security.Cryptography.snk</Link>
+    </None>
   </ItemGroup>
   <Import Project="..\SshNet.Security.Cryptography.Shared\SshNet.Security.Cryptography.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
